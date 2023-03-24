@@ -1,0 +1,19 @@
+{%  extends 'base.html' %}
+
+
+{% block content %}
+<div class="container video-list">
+    <h1 class="mb-3">PeRfEcT</h1>
+    {% for item in object_list %}
+    <div class="d-flex mb-3">
+        <div class="flex-shrink-0">
+          <img src="https://placeimg.com/640/480/any" alt="..." width="120">
+        </div>
+        <div class="flex-grow-1 ms-3">
+          <h5><a href="">{{ item.name }}This is some content from a media component. You can replace this with any content and adjust it as needed.</a></h5>
+        {% lorem 1 p random %}
+        </div>
+      </div>
+      {% endfor %}
+</div>
+{% endblock %}
